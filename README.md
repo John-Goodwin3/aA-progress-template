@@ -18,4 +18,3 @@
 - [ ] 14-python
 - [ ] 15-flask-sqlalchemy-and-forms
 - [ ] 16-docker-and-microservices
-test
