@@ -1,0 +1,49 @@
+<script>
+  function isFive(num) {
+    if (num === 5) {
+      return true;
+    }
+    return false;
+  }
+  console.log(isFive(5));
+
+  // two ways to do isODd
+  function isOdd(number) {
+    return number % 2 !== 0;
+  }
+
+  function isOdd(num) {
+    if (num % 2) {
+      return true;
+    }
+    return false;
+  }
+
+  console.log(isOdd(2)); // => false
+  console.log(isOdd(5)); // => true
+  console.log(isOdd(-17)); // => true
+
+  // THis is the wrong ansewr...
+
+  function isSubstring(searchString, subString) {
+    if (searchString.indexOf(subString)) {
+      return true;
+    }
+  }
+
+  console.log(isSubstring("The cat went to the store", "he cat went")); // => true
+  console.log(isSubstring("Time to program", "time")); // => true
+  console.log(isSubstring("Jump for joy", "joys")); // => false
+
+  //THis is the right answer
+  function isSubstring(searchString, subString) {
+    let lowerSearchStr = searchString.toLowerCase();
+    let lowerSubStr = subString.toLowerCase();
+
+    return lowerSearchStr.indexOf(lowerSubStr) !== -1;
+  }
+
+  console.log(isSubstring("The cat went to the store", "he cat went")); // => true
+  console.log(isSubstring("Time to program", "time")); // => true
+  console.log(isSubstring("Jump for joy", "joys")); // => false
+</script>

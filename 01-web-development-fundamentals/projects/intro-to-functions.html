@@ -1,134 +1,139 @@
 <script>
-function goodbye(name) {
+  function goodbye(name) {
     return "Bye " + name;
-   }
-   
-   console.log(goodbye("Daniel")); // => "Bye Daniel."
-   console.log(goodbye("Mark")); // => "Bye Mark."
-   console.log(goodbye("Beyonce")); // => "Bye Beyonce."
-// 10 functions
-   function mathOne(x,y) {
+  }
+
+  console.log(goodbye("Daniel")); // => "Bye Daniel."
+  console.log(goodbye("Mark")); // => "Bye Mark."
+  console.log(goodbye("Beyonce")); // => "Bye Beyonce."
+  // 10 functions
+  function mathOne(x, y) {
     console.log(x + y);
     return x + y;
-}
-console.log(mathOne(2,4))
-function mathTwo(x,y) {
+  }
+  console.log(mathOne(2, 4));
+  function mathTwo(x, y) {
     console.log(x - y);
     return x - y;
-}
-console.log(mathTwo(6,4))
-function mathThree(x,y) {
-    console.log(x*y);
+  }
+  console.log(mathTwo(6, 4));
+  function mathThree(x, y) {
+    console.log(x * y);
     return x * y;
-}
-console.log(mathThree(7,4));
-function mathFour(x,y) {
+  }
+  console.log(mathThree(7, 4));
+  function mathFour(x, y) {
     console.log(x / y);
     return x / y;
-}
-console.log(mathFour(10,5));
-function mathFive(x,y) {
+  }
+  console.log(mathFour(10, 5));
+  function mathFive(x, y) {
     console.log(x % y);
     return x % y;
-}
-console.log(mathFive(20,5))
-function WordsOne(word) {
+  }
+  console.log(mathFive(20, 5));
+  function WordsOne(word) {
     console.log(word + "This is a sentence");
     return word + "This is a sentence";
-}
-console.log(WordsOne("Hi "))
-function WordsTwo(word) {
+  }
+  console.log(WordsOne("Hi "));
+  function WordsTwo(word) {
     console.log(word + "This is another sentence");
     return word + "This is another sentence";
-}
-console.log(WordsTwo("Hello "))
-function WordsThree(word) {
+  }
+  console.log(WordsTwo("Hello "));
+  function WordsThree(word) {
     console.log(word + "This is Third sentence");
     return word + "This is Third sentence";
-}
-console.log(WordsThree("YO "))
-function WordsFourth(word) {
+  }
+  console.log(WordsThree("YO "));
+  function WordsFourth(word) {
     console.log(word + "This is a Fourth");
     return word + "This is a Fourth";
-}
-console.log(WordsFourth("YEAH "))
-function WordsFinal(word) {
+  }
+  console.log(WordsFourth("YEAH "));
+  function WordsFinal(word) {
     console.log(word + "This the Final one");
     return word + "This the Final one";
-}
-console.log(WordsFinal("YEP "))
+  }
+  console.log(WordsFinal("YEP "));
 
+  // plusFive functions
+  function plusFive(num) {
+    return 5 + num;
+  }
+  console.log(plusFive(10));
 
-// plusFive functions
-function plusFive(num) {
-return 5 + num;
-}
-console.log(plusFive(10));
+  // Call this function.
+  function isCool(string) {
+    let coolSentence = string + " is cool!";
+    console.log(coolSentence);
+    return coolSentence;
+  }
 
-// Call this function.
-function isCool(string) {
-  let coolSentence = string + " is cool!"
-  console.log(coolSentence)
-  return coolSentence
-}
+  isCool("Music");
+  isCool("JavaScript");
+  isCool("the world");
+  // Call the above function passing in the below arguments:
+  // Music
+  // JavaScript
+  // The world
 
-isCool("Music");
-isCool("JavaScript");
-isCool("the world");
-// Call the above function passing in the below arguments:
-// Music
-// JavaScript
-// The world
+  // Finding average of two numbers
+  function averageOfTwo(num1, num2) {
+    return (num1 + num2) / 2;
+  }
 
-// Finding average of two numbers
-function averageOfTwo(num1, num2) {
-  return (num1 + num2) / 2;
-}
+  console.log(averageOfTwo(3, 7)); // => 5.0
+  console.log(averageOfTwo(16, 5)); // => 10.5
+  console.log(averageOfTwo(2, 7.5)); // => 4.75
 
-console.log(averageOfTwo(3, 7)); // => 5.0
-console.log(averageOfTwo(16, 5)); // => 10.5
-console.log(averageOfTwo(2, 7.5)); // => 4.75
+  // Hello strings
+  function hello(str) {
+    return "Hello, " + str;
+  }
 
-// Hello strings
-function hello(str) {
- return "Hello, " + str;
-}
+  hello("cat"); // prints "Hello, cat"
+  hello("Helen"); // prints "Hello, Helen"
+  hello("Sting"); // prints "Hello, Sting"
 
-hello("cat"); // prints "Hello, cat"
-hello("Helen"); // prints "Hello, Helen"
-hello("Sting"); // prints "Hello, Sting"
+  // Divide by three
+  function divideByThree(num) {
+    return num / 3;
+  }
 
-// Divide by three
-function divideByThree(num) {
- return num / 3;
-}
+  console.log(divideByThree(9)); // => 3.0
+  console.log(divideByThree(15)); // => 5.0
+  console.log(divideByThree(98)); // => 32.666666666666664
 
-console.log(divideByThree(9)); // => 3.0
-console.log(divideByThree(15)); // => 5.0
-console.log(divideByThree(98)); // => 32.666666666666664
+  // Return a string that is lower case
 
-// Return a string that is lower case
+  function whisper(str) {
+    return str.toLowerCase();
+  }
 
-function whisper(str) {
-  return str.toLowerCase();
-}
+  console.log(whisper("Hey Buddy")); // => "...hey buddy..."
+  console.log(whisper("YEA! that was fun")); // => "...yea! that was fun..."
 
-console.log(whisper("Hey Buddy")); // => "...hey buddy..."
-console.log(whisper("YEA! that was fun")); // => "...yea! that was fun..."
-
-// Average of fours
-function averageOfFour(num1, num2, num3, num4) {
+  // Average of fours
+  function averageOfFour(num1, num2, num3, num4) {
     return (num1 + num2 + num3 + num4) / 4;
-}
+  }
 
-console.log(averageOfFour(10, 10, 15, 5)); // => 10
-console.log(averageOfFour(3, 10, 11, 4)); // => 7
-console.log(averageOfFour(1, 2, 3, 4)); // => 2.5
+  console.log(averageOfFour(10, 10, 15, 5)); // => 10
+  console.log(averageOfFour(3, 10, 11, 4)); // => 7
+  console.log(averageOfFour(1, 2, 3, 4)); // => 2.5
 
-//yELLING
-function yell(str) {
-  return str.toUpperCase();  
-}
+  //yELLING
+  function yell(str) {
+    return str.toUpperCase();
+  }
 
-console.log(yell("Yo yo yo"));
+  console.log(yell("Yo yo yo"));
+
+  // concatenating strings with upper and lower cases
+  function echo(string) {
+    return string.toUpperCase() + "..." + string + "..." + string.toLowerCase();
+  }
+  console.log(echo("Mom!"));
 </script>
