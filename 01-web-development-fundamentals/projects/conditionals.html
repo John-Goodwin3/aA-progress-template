@@ -46,4 +46,231 @@
   console.log(isSubstring("The cat went to the store", "he cat went")); // => true
   console.log(isSubstring("Time to program", "time")); // => true
   console.log(isSubstring("Jump for joy", "joys")); // => false
+
+  // LogBetween
+
+  function logBetween(lowNum, highNum) {
+    let index = lowNum;
+
+    // this is the condition that will be checked every time this loop is run
+    while (highNum >= index && index <= highNum) {
+      console.log(index);
+      index++;
+    }
+  }
+
+  logBetween(-1, 2);
+  logBetween(14, 6);
+  logBetween(4, 6);
+
+  // Alternate solution
+  function logBetween(lowNum, highNum) {
+    for (let i = lowNum; i <= highNum; i += 1) {
+      console.log(i);
+    }
+  }
+
+  function logBetweenWhile(lowNum, highNum) {
+    let i = lowNum;
+    while (i <= highNum) {
+      console.log(i);
+      i++;
+    }
+  }
+
+  // Print Fves
+  function printFives_if(max) {
+    for (let num = 1; num < max; num++) {
+      if (num % 5 === 0) {
+        console.log(num);
+      }
+    }
+  }
+
+  // Example usage:
+  printFives_if(20); // Prints multiples of 5 less than 20
+
+  function printFives(max) {
+    for (let num = 5; num < max; num += 5) {
+      console.log(num);
+    }
+  }
+
+  // Example usage:
+  printFives(20); // Prints multiples of 5 less than 20
+
+  // Alternate solutions
+
+  function printFives1For(max) {
+    for (let i = 0; i < max; i += 1) {
+      if (i % 5 === 0) {
+        console.log(i);
+      }
+    }
+  }
+
+  function printFives1(max) {
+    let i = 0;
+    while (i < max) {
+      if (i % 5 === 0) {
+        console.log(i);
+      }
+      i++;
+    }
+  }
+
+  function printFives2(max) {
+    for (let i = 0; i < max; i += 5) {
+      console.log(i);
+    }
+  }
+
+  function printFives2While(max) {
+    let i = 0;
+    while (i < max) {
+      console.log(i);
+      i += 5;
+    }
+  }
+
+  // Log Between Stepper
+  function logBetweenStepper(min, max, step) {
+    if (step <= 0) {
+      console.log("Step must be a positive value.");
+    }
+
+    for (let num = min; num <= max; num += step) {
+      console.log(num);
+    }
+  }
+  logBetweenStepper(5, 9, 1);
+
+  //Alternate Solution
+
+  function logBetweenStepperFor(min, max, step) {
+    for (let i = min; i <= max; i += step) {
+      console.log(i);
+    }
+  }
+
+  function logBetweenStepper(min, max, step) {
+    let i = min;
+    while (i <= max) {
+      console.log(i);
+      i += step;
+    }
+  }
+
+  // Fizz Buzz
+  function fizzBuzz(max) {
+    for (let i = 1; i < max; i++) {
+      if ((i % 3 === 0 || i % 5 === 0) && !(i % 3 === 0 && i % 5 === 0)) {
+        console.log(i);
+      }
+    }
+  }
+
+  fizzBuzz(20); // Prints numbers divisible by 3 or 5, but not both
+
+  // Alternate solution
+
+  function fizzBuzz(max) {
+    for (let i = 0; i < max; i += 1) {
+      if (i % 3 === 0 && i % 5 !== 0) {
+        console.log(i);
+      } else if (i % 5 === 0 && i % 3 !== 0) {
+        console.log(i);
+      }
+    }
+  }
+
+  function fizzBuzzWhile(max) {
+    let i = 0;
+    while (i < max) {
+      if (i % 3 === 0 && i % 5 !== 0) {
+        console.log(i);
+      } else if (i % 5 === 0 && i % 3 !== 0) {
+        console.log(i);
+      }
+      i++;
+    }
+  }
+
+  function fizzBuzzNested(max) {
+    for (let i = 0; i < max; i += 1) {
+      if (i % 3 === 0) {
+        if (i % 5 !== 0) {
+          console.log(i);
+        }
+      } else if (i % 5 === 0) {
+        console.log(i);
+      }
+    }
+  }
+
+  /* arrays*/
+
+  function combineArray(array1, array2) {
+    // your code here...
+    return array1.concat(array2);
+  }
+  console.log(combineArray([1, 2], [3, 4])); // => [1, 2, 3, 4]
+  console.log(combineArray([17, 5], [6, 7])); // => [17, 5, 6, 7]
+
+  // Alternate solution
+  function combineArray(array1, array2) {
+    let newArray = array1.concat(array2);
+    return newArray;
+  }
+
+  console.log(combineArray([1, 2], [3, 4])); // => [1, 2, 3, 4]
+  console.log(combineArray([17, 5], [6, 7])); // => [17, 5, 6, 7]
+
+  // Doubler
+  function doubler(numbers) {
+    return numbers.map(num => 2 * num);
+}
+
+console.log(doubler([1, 2, 3, 4])); // Output: [2, 4, 6, 8]
+console.log(doubler([7, 1, 8])); // Output: [14, 2, 16]
+
+// Alternate solution
+function doubler(numbers) {
+  let doubledNums = [];
+
+  let i = 0;
+  while (i < numbers.length) {
+    let oldNum = numbers[i];
+    let newNum = oldNum * 2;
+    // this step is important because concat does NOT change the original array
+    doubledNums = doubledNums.concat(newNum);
+
+    i += 1;
+  }
+
+  return doubledNums;
+}
+
+console.log(doubler([1, 2, 3, 4])); // => [2, 4, 6, 8]
+console.log(doubler([7, 1, 8])); // => [14, 2, 16]
+
+// Vowels
+function countVowels(word) {
+    const vowels = "aeiouAEIOU";
+    let vowelCount = 0;
+
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i])) {
+            vowelCount++;
+        }
+    }
+
+    return vowelCount;
+}
+
+console.log(countVowels("bootcamp")); // Output: 3
+console.log(countVowels("apple")); // Output: 2
+console.log(countVowels("pizza")); // Output: 2
+
+
 </script>
