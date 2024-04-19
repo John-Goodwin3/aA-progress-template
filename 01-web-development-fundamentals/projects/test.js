@@ -1,7 +1,14 @@
+var assert = require("assert");
+
+describe("#divideByThree()", function () {
+  it("should Returns the passed in number argument divided by three", function () {
+    assert.equal(divideByThree(15), 5n);
+  });
+});
+
 function divideByThree(num) {
   /* Returns the passed in number argument divided by three. */
-  console.log(num / 3);
-  return;
+  return num / 3;
 }
 
 function averageOfTwo(num1, num2) {
@@ -21,14 +28,13 @@ function doubler(nums) {
   /* Takes an array of numbers and returns a new array where every element of
     the original array is multiplied by 2. */
 
-   const doubledArray = [];
+  const doubledArray = [];
 
-   for (const num of nums) {
+  for (const num of nums) {
+    doubledArray.push(num * 2);
+  }
 
-       doubledArray.push(num * 2);
-   }
-
-   return doubledArray;
+  return doubledArray;
 }
 function combineArrays(arr1, arr2) {
   /* Takes in two arrays of numbers and returns the two arrays combined into
@@ -36,16 +42,16 @@ function combineArrays(arr1, arr2) {
     calling this method won't permanently change, also known as **mutate**,
     either array. */
 
-     const combinedArray = arr1.concat(arr2);
+  const combinedArray = arr1.concat(arr2);
 
-     return combinedArray;
+  return combinedArray;
 }
 
 function wordWithinArray(word, arr) {
   /* Takes in both a word and an array of words as arguments and returns a
     boolean that returns true if that string is located inside of the array, or
     false if it does not. Use `Array.indexOf`. */
-    return arr.indexOf(word) !== -1;
+  return arr.indexOf(word) !== -1;
 }
 
 function echo(str) {
@@ -54,12 +60,12 @@ function echo(str) {
     echo("hey"); // => returns "HEY ... hey ... hey"
     echo("JUMp"); // => returns "JUMP ... JUMp ... jump" */
 
-    const upper = str.toUpperCase();
-    const lower = str.toLowerCase();
-    const capitalized = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-  
-    // Return the "echo-ized" string
-    return `${upper} ... ${capitalized} ... ${lower}`;
+  const upper = str.toUpperCase();
+  const lower = str.toLowerCase();
+  const capitalized = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+  // Return the "echo-ized" string
+  return `${upper} ... ${capitalized} ... ${lower}`;
 }
 
 function fizzBuzz(max) {
@@ -87,20 +93,20 @@ function goodbye(name) {
 function isFive(num) {
   /* Takes in a number, num, and returns `true` if a number is equal to 5 and
     `false` if it is not. */
-    return num === 5;
+  return num === 5;
 }
 
 function isOdd(num) {
   /* Takes in a number and returns `true` if the number is odd and returns
     `false` otherwise. Try writing this with and without `if` statements */
-    return num % 2 !== 0;
+  return num % 2 !== 0;
 }
 
 function isSubString(searchString, subString) {
   /* Takes in two strings, `searchString` and `subString`. Should return
     `true` if `subString` is a part of the`searchString`, regardless of upper
     or lower case, and `false` if otherwise. */
-    return searchString.toLowerCase().includes(subString.toLowerCase())
+  return searchString.toLowerCase().includes(subString.toLowerCase());
 }
 
 function aCounter(word) {
@@ -120,14 +126,14 @@ function aCounter(word) {
     }
     return count;
     */
-    let count = 0;
-    for (let index = 0; index < word.length; index++) {
-        let char = word[index];
-        if (char === "a" || char === "A") {
-            count += 1;
-        }
+  let count = 0;
+  for (let index = 0; index < word.length; index++) {
+    let char = word[index];
+    if (char === "a" || char === "A") {
+      count += 1;
     }
-    return count;
+  }
+  return count;
 }
 
 module.exports = {

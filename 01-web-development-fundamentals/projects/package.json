@@ -1,0 +1,14 @@
+{
+  "name": "aa-progress-template",
+  "version": "1.0.0",
+  "description": "*contains my notes, solutions, projects, etc. corresponding to my work through the App Academy Open curriculum*",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive *.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.4.0"
+  }
+}
